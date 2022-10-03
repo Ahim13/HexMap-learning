@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb39b4338694c65b4e1edf9c188dd4c, type: 3}
+  m_Name: TestHexTileModel
+  m_EditorClassIdentifier: 
+  HexTileModelJson: "{\r\n\t\"TileSize\": 1,\r\n\t\"TilePadding\": 0.1,\r\n\t\"DefaultTileColor\":
+    \"B09EB0\",\r\n\t\"Tiles\": [\r\n\t\t{\r\n\t\t\t\"Index\": 0,\r\n\t\t\t\"ClickedColor\":
+    \"CB7B5C\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 1,\r\n\t\t\t\"ClickedColor\":
+    \"D40D3C\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 2,\r\n\t\t\t\"ClickedColor\":
+    \"702B2D\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 3,\r\n\t\t\t\"ClickedColor\":
+    \"DA485C\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 4,\r\n\t\t\t\"ClickedColor\":
+    \"B93F17\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 5,\r\n\t\t\t\"ClickedColor\":
+    \"7590BA\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 6,\r\n\t\t\t\"ClickedColor\":
+    \"362A29\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 7,\r\n\t\t\t\"ClickedColor\":
+    \"2E3B3D\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 8,\r\n\t\t\t\"ClickedColor\":
+    \"4A4F6B\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 9,\r\n\t\t\t\"ClickedColor\":
+    \"515653\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 10,\r\n\t\t\t\"ClickedColor\":
+    \"35555D\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 11,\r\n\t\t\t\"ClickedColor\":
+    \"AAEC52\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 12,\r\n\t\t\t\"ClickedColor\":
+    \"5950A9\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 13,\r\n\t\t\t\"ClickedColor\":
+    \"E08493\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 14,\r\n\t\t\t\"ClickedColor\":
+    \"39A3C8\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 15,\r\n\t\t\t\"ClickedColor\":
+    \"6302AD\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 16,\r\n\t\t\t\"ClickedColor\":
+    \"F2DAE4\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 17,\r\n\t\t\t\"ClickedColor\":
+    \"AF9D8F\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Index\": 18,\r\n\t\t\t\"ClickedColor\":
+    \"635B68\"\r\n\t\t}\r\n\t]\r\n}"
