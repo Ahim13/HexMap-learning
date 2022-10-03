@@ -20,6 +20,8 @@ public class HexTileMapGenerator : MonoBehaviour
 
 	[SerializeField] private float _spawnTime = 1;
 
+	[SerializeField] private float _spawnDelay = 0.5f;
+	
 	private readonly List<HexTile> _tiles = new List<HexTile>();
 
 	private float _tileWidth;
@@ -122,36 +124,36 @@ public class HexTileMapGenerator : MonoBehaviour
 
 	private async UniTask<HexTile> AddTile(HexTile fromGe, Direction direction)
 	{
-		HexTile ge;
+		HexTile hexTile;
 
 		switch (direction)
 		{
 			case Direction.North:
-				ge = InstantiateTile(fromGe.transform.position + GetSpawnDirection((int)Direction.North) * TileWithPAdding);
+				hexTile = InstantiateTile(fromGe.transform.position + GetSpawnDirection((int)Direction.North) * TileWithPAdding);
 				break;
 			case Direction.NorthEast:
-				ge = InstantiateTile(fromGe.transform.position + GetSpawnDirection((int)Direction.NorthEast) * TileWithPAdding);
+				hexTile = InstantiateTile(fromGe.transform.position + GetSpawnDirection((int)Direction.NorthEast) * TileWithPAdding);
 				break;
 			case Direction.SouthEast:
-				ge = InstantiateTile(fromGe.transform.position + GetSpawnDirection((int)Direction.SouthEast) * TileWithPAdding);
+				hexTile = InstantiateTile(fromGe.transform.position + GetSpawnDirection((int)Direction.SouthEast) * TileWithPAdding);
 				break;
 			case Direction.South:
-				ge = InstantiateTile(fromGe.transform.position + GetSpawnDirection((int)Direction.South) * TileWithPAdding);
+				hexTile = InstantiateTile(fromGe.transform.position + GetSpawnDirection((int)Direction.South) * TileWithPAdding);
 				break;
 			case Direction.SouthWest:
-				ge = InstantiateTile(fromGe.transform.position + GetSpawnDirection((int)Direction.SouthWest) * TileWithPAdding);
+				hexTile = InstantiateTile(fromGe.transform.position + GetSpawnDirection((int)Direction.SouthWest) * TileWithPAdding);
 				break;
 			case Direction.NorthWest:
-				ge = InstantiateTile(fromGe.transform.position + GetSpawnDirection((int)Direction.NorthWest) * TileWithPAdding);
+				hexTile = InstantiateTile(fromGe.transform.position + GetSpawnDirection((int)Direction.NorthWest) * TileWithPAdding);
 				break;
 			default:
 				return null;
 		}
 
-		_lastSpawnedHex = ge;
-		_tiles.Add(ge);
-		await ge.transform.DOScale(Vector3.zero, _spawnTime).From();
-		return ge;
+		_lastSpawnedHex = hexTile;
+		_tiles.Add(hexTile);
+		await UniTask.Delay(TimeSpan.FromSeconds(_spawnDelay));
+		return hexTile;
 	}
 
 	private async UniTask<HexTile> AddTile(Vector3 pos)
@@ -159,7 +161,7 @@ public class HexTileMapGenerator : MonoBehaviour
 		HexTile ge = InstantiateTile(pos);
 		_lastSpawnedHex = ge;
 		_tiles.Add(ge);
-		await ge.transform.DOScale(Vector3.zero, _spawnTime).From();
+		await UniTask.Delay(TimeSpan.FromSeconds(_spawnDelay));
 		return ge;
 	}
 

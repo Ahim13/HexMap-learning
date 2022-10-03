@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
 
 	private void DetectObject()
 	{
+	
 		Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
 
 		if (Physics.Raycast(ray, out RaycastHit hit))

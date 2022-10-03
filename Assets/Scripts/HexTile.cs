@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using UnityEngine;
 
 
@@ -9,10 +10,11 @@ public class HexTile : MonoBehaviour
 	[SerializeField] private float _selectedHeight;
 	[SerializeField] private float _animationSpeed;
 	[SerializeField] private float _animationSpeedDissolve;
+	[SerializeField] private Ease _ease;
 	[SerializeField] private Color _selectedColor;
 	[SerializeField] private Color _defaultColor;
-	[SerializeField]private int _dissolveEndValue;
-	
+	[SerializeField] private float _dissolveEndValue;
+
 	private float _originalHeight;
 	private int _tileIndex;
 
@@ -30,7 +32,7 @@ public class HexTile : MonoBehaviour
 		GetComponent<Renderer>().materials = materials;
 		_dissolveMaterial.SetColor(DefaultColor, _defaultColor);
 		_dissolveMaterial.SetColor(EdgeColor, _selectedColor);
-		_dissolveMaterial.DOFloat(_dissolveEndValue, Amount, _animationSpeedDissolve);
+		_dissolveMaterial.DOFloat(_dissolveEndValue, Amount, _animationSpeedDissolve).SetEase(_ease);
 	}
 
 	public void Init(int idx, Color defaultColor, Color selectedColor)
@@ -41,7 +43,7 @@ public class HexTile : MonoBehaviour
 		_dissolveMaterial.SetColor(DefaultColor, _defaultColor);
 		_dissolveMaterial.SetColor(EdgeColor, _selectedColor);
 	}
-
+	
 	public void Select()
 	{
 		transform.DOMoveY(_selectedHeight, _animationSpeed);

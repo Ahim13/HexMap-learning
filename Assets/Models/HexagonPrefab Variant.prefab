@@ -133,7 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _selectedHeight: 0.1
   _animationSpeed: 0.5
-  _animationSpeedDissolve: 2
+  _animationSpeedDissolve: 2.5
+  _ease: 21
   _selectedColor: {r: 0.003921569, g: 0.5764706, b: 0.34117648, a: 1}
   _defaultColor: {r: 0.1882353, g: 0.1882353, b: 0.1882353, a: 1}
-  _dissolveEndValue: 0
+  _dissolveEndValue: 0.1
